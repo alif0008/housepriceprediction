@@ -10,7 +10,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://cdn.yopacrm.yopa.co.uk/homeowners-hub/uploads/2022/01/history-of-house-price-crashes-banner.png");
+             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://png.pngtree.com/background/20231030/original/pngtree-d-illustration-of-isolated-red-background-with-a-group-of-blurred-picture-image_5803330.jpg");
              background-attachment: fixed;
              background-size: cover;
          }}
