@@ -10,7 +10,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://img.pikbest.com/wp/202405/blur-red-background-with-blurred-houses-3d-illustration-of-a-group_9852180.jpg!bw700");
+             background-image: url("https://png.pngtree.com/background/20231030/original/pngtree-d-illustration-of-isolated-red-background-with-a-group-of-blurred-picture-image_5803330.jpg");
              background-attachment: fixed;
              background-size: cover;
          }}
