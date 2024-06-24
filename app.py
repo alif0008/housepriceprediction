@@ -60,7 +60,7 @@ col1, col2 = st.columns([3, 1])
 with col1:
     income = st.number_input("Avg. Area Income:", min_value=0.0, step=1000.0, format="%.2f")
 with col2:
-   \n st.text("(e.g., 60000)")
+   st.text("(e.g., 60000)")
 
 col1, col2 = st.columns([3, 1])
 with col1:
