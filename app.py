@@ -10,7 +10,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://files.123freevectors.com/wp-content/original/112808-red-and-black-blurred-background-vector.jpg");
+             background-image: url("https://img.pikbest.com/wp/202405/blur-red-background-with-blurred-houses-3d-illustration-of-a-group_9852180.jpg!bw700");
              background-attachment: fixed;
              background-size: cover;
          }}
