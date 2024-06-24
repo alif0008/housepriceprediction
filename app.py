@@ -10,7 +10,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://png.pngtree.com/background/20231030/original/pngtree-d-illustration-of-isolated-red-background-with-a-group-of-blurred-picture-image_5803330.jpg");
+             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://cdn.yopacrm.yopa.co.uk/homeowners-hub/uploads/2022/01/history-of-house-price-crashes-banner.png");
              background-attachment: fixed;
              background-size: cover;
          }}
@@ -33,15 +33,10 @@ def add_bg_from_url():
          unsafe_allow_html=True
      )
 
-# Add background image
-add_bg_from_url()
-
 # Load dataset
 @st.cache_data
 def load_data():
     return pd.read_csv("Housingprice.csv")
-
-data = load_data()
 
 # Preprocess dataset
 @st.cache_data
@@ -59,8 +54,6 @@ def preprocess_data(data):
 
     return data
 
-data = preprocess_data(data)
-
 # Split data and train model
 @st.cache_resource
 def train_model(data):
@@ -72,8 +65,6 @@ def train_model(data):
     rf_model.fit(X_train, Y_train)
     return rf_model
 
-model = train_model(data)
-
 # Define meaningful price ranges
 price_ranges = {
     'Low': 'Affordable houses (below average prices)',
@@ -81,10 +72,20 @@ price_ranges = {
     'High': 'Luxury or high-end houses'
 }
 
+# Add background image with reduced brightness
+add_bg_from_url()
+
 # Streamlit app
 st.title("House Price Prediction")
 
 st.header("Input House Details")
+
+# Load and preprocess data
+data = load_data()
+data = preprocess_data(data)
+
+# Train model
+model = train_model(data)
 
 # Using columns to place the input field and example side by side
 col1, col2 = st.columns([3, 1])
