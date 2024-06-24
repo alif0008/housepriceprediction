@@ -10,7 +10,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://cdn.yopacrm.yopa.co.uk/homeowners-hub/uploads/2022/01/history-of-house-price-crashes-banner.png");
+             background-image: url("https://media.istockphoto.com/id/983343894/photo/real-estate-property-industry-concept-background-unique-lighting-house-sign-in-group-of-houses.jpg?s=612x612&w=0&k=20&c=QlSmkUzJ2_xa0vm0Rvrs-LY-ey5dEu1ZBWi_KOOaRL4=");
              background-attachment: fixed;
              background-size: cover;
          }}
