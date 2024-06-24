@@ -5,6 +5,37 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://cdn.yopacrm.yopa.co.uk/homeowners-hub/uploads/2022/01/history-of-house-price-crashes-banner.png");
+             background-attachment: fixed;
+             background-size: cover;
+         }}
+         .stApp > header {{
+             background-color: transparent;
+         }}
+         .stApp {{
+             color: white;
+         }}
+         .stButton > button {{
+             color: black;
+             background-color: #ffffff;
+             border: 2px solid #4CAF50;
+         }}
+         .stTextInput > div > div > input {{
+             color: black;
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+# Add background image
+add_bg_from_url()
+
 # Load dataset
 @st.cache_data
 def load_data():
@@ -60,7 +91,7 @@ col1, col2 = st.columns([3, 1])
 with col1:
     income = st.number_input("Avg. Area Income:", min_value=0.0, step=1000.0, format="%.2f")
 with col2:
-   st.text("(e.g., 60000)")
+    st.text("(e.g., 60000)")
 
 col1, col2 = st.columns([3, 1])
 with col1:
