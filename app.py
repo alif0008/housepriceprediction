@@ -58,7 +58,7 @@ st.header("Input House Details")
 # Using columns to place the input field and example side by side
 col1, col2 = st.columns([3, 1])
 with col1:
-    income = st.number_input("Avg. Area Income:", min_value=0.0, step=1000.0, format="%.2f")
+    income = st.number_input(\n"Avg. Area Income:", min_value=0.0, step=1000.0, format="%.2f")
 with col2:
     st.text("(e.g., 60000)")
 
@@ -93,6 +93,6 @@ if st.button("Predict"):
     st.success(f'Predicted Price Category: {predicted_category}')
 
 # Add some information about the model
-st.sidebar.header("House Price Prediction")
+st.sidebar.header("About")
 st.sidebar.info("This app uses a Random Forest model to predict house price categories based on area statistics.")
 st.sidebar.info("The model is trained on historical housing data and categorizes prices into Low, Medium, and High ranges.")
