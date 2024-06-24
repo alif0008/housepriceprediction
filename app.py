@@ -55,11 +55,36 @@ st.title("House Price Prediction")
 
 st.header("Input House Details")
 
-income = st.number_input("Avg. Area Income:", min_value=0.0, step=1000.0, format="%.2f")
-age = st.number_input("Avg. Area House Age:", min_value=0.0, step=1.0, format="%.1f")
-rooms = st.number_input("Avg. Area Number of Rooms:", min_value=0.0, step=1.0, format="%.1f")
-bedrooms = st.number_input("Avg. Area Number of Bedrooms:", min_value=0.0, step=1.0, format="%.1f")
-population = st.number_input("Area Population:", min_value=0.0, step=1000.0, format="%.0f")
+# Using columns to place the input field and example side by side
+col1, col2 = st.columns([3, 1])
+with col1:
+    income = st.number_input("Avg. Area Income:", min_value=0.0, step=1000.0, format="%.2f")
+with col2:
+    st.text("(e.g., 60000)")
+
+col1, col2 = st.columns([3, 1])
+with col1:
+    age = st.number_input("Avg. Area House Age:", min_value=0.0, step=1.0, format="%.1f")
+with col2:
+    st.text("(e.g., 20)")
+
+col1, col2 = st.columns([3, 1])
+with col1:
+    rooms = st.number_input("Avg. Area Number of Rooms:", min_value=0.0, step=1.0, format="%.1f")
+with col2:
+    st.text("(e.g., 5)")
+
+col1, col2 = st.columns([3, 1])
+with col1:
+    bedrooms = st.number_input("Avg. Area Number of Bedrooms:", min_value=0.0, step=1.0, format="%.1f")
+with col2:
+    st.text("(e.g., 3)")
+
+col1, col2 = st.columns([3, 1])
+with col1:
+    population = st.number_input("Area Population:", min_value=0.0, step=1000.0, format="%.0f")
+with col2:
+    st.text("(e.g., 36500)")
 
 if st.button("Predict"):
     input_data = [[income, age, rooms, bedrooms, population]]
@@ -68,6 +93,6 @@ if st.button("Predict"):
     st.success(f'Predicted Price Category: {predicted_category}')
 
 # Add some information about the model
-st.sidebar.header("About")
+st.sidebar.header("House Price Prediction")
 st.sidebar.info("This app uses a Random Forest model to predict house price categories based on area statistics.")
 st.sidebar.info("The model is trained on historical housing data and categorizes prices into Low, Medium, and High ranges.")
